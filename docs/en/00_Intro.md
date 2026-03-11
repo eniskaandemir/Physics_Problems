@@ -541,3 +541,596 @@ $$
 $$
 
 which corresponds to its projection onto the horizontal and vertical axes.
+
+
+# Task 06 – Function Analysis
+
+## Problem Statement
+
+Consider the function
+
+$f(x) = 3x^2 - 12x + 7$
+
+Determine whether the function has a local maximum or a local minimum, and find its location.
+
+## Theory
+
+For a differentiable function, local extrema occur at critical points where the first derivative is zero:
+
+$$
+f'(x) = 0
+$$
+
+To classify the critical point, the second derivative is used:
+
+- if $f''(x) > 0$, the function has a local minimum
+- if $f''(x) < 0$, the function has a local maximum
+
+A quadratic function of the form
+
+$$
+f(x) = ax^2 + bx + c
+$$
+
+has a parabola shape. If $a > 0$, the parabola opens upward and its vertex is a minimum.
+
+## Step-by-Step Solution
+
+Differentiate the function:
+
+$$
+f(x) = 3x^2 - 12x + 7
+$$
+
+$$
+f'(x) = 6x - 12
+$$
+
+Set the derivative equal to zero:
+
+$$
+6x - 12 = 0
+$$
+
+$$
+6x = 12
+$$
+
+$$
+x = 2
+$$
+
+This is the critical point.
+
+Now compute the second derivative:
+
+$$
+f''(x) = 6
+$$
+
+Since
+
+$$
+f''(x) = 6 > 0
+$$
+
+the critical point at $x=2$ is a local minimum.
+
+Next, evaluate the function at $x=2$:
+
+$$
+f(2) = 3(2)^2 - 12(2) + 7
+$$
+
+$$
+f(2) = 3 \cdot 4 - 24 + 7
+$$
+
+$$
+f(2) = 12 - 24 + 7
+$$
+
+$$
+f(2) = -5
+$$
+
+Therefore, the minimum point is
+
+$$
+(2,-5)
+$$
+
+## Final Result
+
+The function has a local minimum at
+
+$$
+x = 2
+$$
+
+with value
+
+$$
+f(2) = -5
+$$
+
+Thus, the minimum point is
+
+$$
+(2,-5)
+$$
+
+There is no local maximum.
+
+## Interpretation
+
+Because the coefficient of $x^2$ is positive, the parabola opens upward. This guarantees that the vertex is the lowest point of the graph. Therefore, the function decreases until $x=2$ and increases after $x=2$.
+
+
+# Task 07 – Logic and Series
+
+## Problem Statement
+
+A bicycle is initially $10 \text{ m}$ from a wall and moves toward the wall at a constant speed of $1 \text{ m/s}$. A fly starts from the bicycle's front wheel and flies toward the wall at $2 \text{ m/s}$. Each time the fly reaches the wall, it immediately turns around and flies back toward the bicycle, repeating this process until the bicycle reaches the wall.
+
+Determine the total distance traveled by the fly before it is crushed.
+
+## Theory
+
+This type of problem can be approached in two ways:
+
+1. By summing an infinite sequence of back-and-forth distances
+2. By using total time of motion
+
+The second method is more direct. If the fly moves continuously until the bicycle reaches the wall, then
+
+$$
+\text{distance traveled by fly} = \text{fly speed} \times \text{total time}
+$$
+
+## Step-by-Step Solution
+
+The bicycle starts $10 \text{ m}$ from the wall and moves at speed
+
+$$
+v_{\text{bike}} = 1 \text{ m/s}
+$$
+
+The time required for the bicycle to reach the wall is
+
+$$
+t = \frac{\text{distance}}{\text{speed}}
+$$
+
+Substitute the known values:
+
+$$
+t = \frac{10}{1}
+$$
+
+$$
+t = 10 \text{ s}
+$$
+
+The fly travels during the entire $10 \text{ s}$ interval at constant speed
+
+$$
+v_{\text{fly}} = 2 \text{ m/s}
+$$
+
+Therefore, the total distance traveled by the fly is
+
+$$
+d_{\text{fly}} = v_{\text{fly}} t
+$$
+
+$$
+d_{\text{fly}} = 2 \cdot 10
+$$
+
+$$
+d_{\text{fly}} = 20 \text{ m}
+$$
+
+## Final Result
+
+The fly travels a total distance of
+
+$$
+20 \text{ m}
+$$
+
+before being crushed.
+
+## Interpretation
+
+Although the fly changes direction infinitely many times, the total motion lasts only until the bicycle reaches the wall. Since that takes $10$ seconds, the problem reduces to uniform motion of the fly over that time interval. The infinite turning process does not change the total distance result.
+
+
+# Task 08 – Definite Integrals
+
+## Problem Statement
+
+Calculate the area under the curve of the function
+
+$f(x) = \sin(x)$
+
+from
+
+$x = 0$
+
+to
+
+$x = \pi$
+
+## Theory
+
+The area under a curve on an interval $[a,b]$ is given by the definite integral
+
+$$
+\int_a^b f(x)\,dx
+$$
+
+For the sine function,
+
+$$
+\int \sin(x)\,dx = -\cos(x) + C
+$$
+
+Thus,
+
+$$
+\int_0^{\pi} \sin(x)\,dx
+$$
+
+is found by evaluating the antiderivative at the upper and lower limits.
+
+## Step-by-Step Solution
+
+Set up the definite integral:
+
+$$
+A = \int_0^{\pi} \sin(x)\,dx
+$$
+
+Find the antiderivative:
+
+$$
+\int \sin(x)\,dx = -\cos(x)
+$$
+
+Apply the limits:
+
+$$
+A = \left[-\cos(x)\right]_0^{\pi}
+$$
+
+Substitute the upper and lower bounds:
+
+$$
+A = -\cos(\pi) - \left(-\cos(0)\right)
+$$
+
+Use the trigonometric values
+
+$$
+\cos(\pi) = -1
+$$
+
+and
+
+$$
+\cos(0) = 1
+$$
+
+Then
+
+$$
+A = -(-1) - (-1)
+$$
+
+$$
+A = 1 + 1
+$$
+
+$$
+A = 2
+$$
+
+## Final Result
+
+The area under the curve is
+
+$$
+2
+$$
+
+## Interpretation
+
+On the interval from $0$ to $\pi$, the function $\sin(x)$ is nonnegative, so the definite integral equals the geometric area under the curve. The result shows that the total enclosed area is exactly $2$ square units.
+
+
+# Task 09 – Optimization Problem
+
+## Problem Statement
+
+A rectangle is placed under the curve
+
+$y = 3 - x^2$
+
+in the first quadrant.
+
+Determine the dimensions of the rectangle with maximum area.
+
+## Theory
+
+A rectangle in the first quadrant under the curve can be described by:
+
+- width $x$
+- height $y = 3 - x^2$
+
+Its area is therefore
+
+$$
+A(x) = x(3 - x^2)
+$$
+
+To maximize the area, differentiate $A(x)$ and solve
+
+$$
+A'(x) = 0
+$$
+
+Then use the second derivative or sign analysis to confirm that the critical point gives a maximum.
+
+## Step-by-Step Solution
+
+### Geometric Setup
+
+Since the upper-right corner of the rectangle lies on the curve
+
+$$
+y = 3 - x^2
+$$
+
+the rectangle has:
+
+$$
+\text{width} = x
+$$
+
+$$
+\text{height} = 3 - x^2
+$$
+
+Its area is
+
+$$
+A(x) = x(3 - x^2)
+$$
+
+Expand the expression:
+
+$$
+A(x) = 3x - x^3
+$$
+
+### Differentiate the Area Function
+
+Compute the derivative:
+
+$$
+A'(x) = 3 - 3x^2
+$$
+
+Set the derivative equal to zero:
+
+$$
+3 - 3x^2 = 0
+$$
+
+$$
+1 - x^2 = 0
+$$
+
+$$
+x^2 = 1
+$$
+
+$$
+x = 1
+$$
+
+Only the positive solution is valid because the rectangle is in the first quadrant.
+
+### Determine the Height
+
+Substitute $x=1$ into the curve equation:
+
+$$
+y = 3 - x^2
+$$
+
+$$
+y = 3 - 1^2
+$$
+
+$$
+y = 2
+$$
+
+### Verify Maximum
+
+Differentiate again:
+
+$$
+A''(x) = -6x
+$$
+
+At $x=1$:
+
+$$
+A''(1) = -6
+$$
+
+Since
+
+$$
+A''(1) < 0
+$$
+
+the area is maximized at this point.
+
+### Maximum Area
+
+Compute the maximum area:
+
+$$
+A_{\max} = xy
+$$
+
+$$
+A_{\max} = 1 \cdot 2
+$$
+
+$$
+A_{\max} = 2
+$$
+
+## Final Result
+
+The rectangle with maximum area has dimensions
+
+$$
+\text{width} = 1
+$$
+
+and
+
+$$
+\text{height} = 2
+$$
+
+Its maximum area is
+
+$$
+2
+$$
+
+## Interpretation
+
+As the rectangle becomes wider, its height decreases because the top-right corner must remain on the parabola. The maximum-area rectangle occurs at the balance point where the gain in width no longer compensates for the loss in height.
+
+
+# Task 10 – Infinite Series
+
+## Problem Statement
+
+An ant starts at the origin and moves according to the pattern:
+
+- $1 \text{ m}$ east
+- $\frac{1}{2} \text{ m}$ north
+- $\frac{1}{3} \text{ m}$ west
+- $\frac{1}{4} \text{ m}$ south
+- $\frac{1}{5} \text{ m}$ east
+
+and so on.
+
+Determine the final position of the ant.
+
+## Theory
+
+The motion alternates between horizontal and vertical directions:
+
+- odd-numbered steps in the horizontal direction
+- even-numbered steps in the vertical direction
+
+The horizontal displacement is an alternating series:
+
+$$
+x = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots
+$$
+
+The vertical displacement is also an alternating series:
+
+$$
+y = \frac{1}{2} - \frac{1}{4} + \frac{1}{6} - \frac{1}{8} + \cdots
+$$
+
+These are standard infinite series.
+
+The Leibniz series gives
+
+$$
+1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots = \frac{\pi}{4}
+$$
+
+Also,
+
+$$
+1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots = \ln 2
+$$
+
+From this, the even-term alternating series can be derived.
+
+## Step-by-Step Solution
+
+### Horizontal Displacement
+
+The ant moves horizontally on odd-numbered steps:
+
+$$
+x = 1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots
+$$
+
+This is the Leibniz series for arctangent:
+
+$$
+x = \frac{\pi}{4}
+$$
+
+### Vertical Displacement
+
+The vertical motion is
+
+$$
+y = \frac{1}{2} - \frac{1}{4} + \frac{1}{6} - \frac{1}{8} + \cdots
+$$
+
+Factor out $\frac{1}{2}$:
+
+$$
+y = \frac{1}{2}\left(1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots \right)
+$$
+
+The expression in parentheses is the alternating harmonic series:
+
+$$
+1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \cdots = \ln 2
+$$
+
+Therefore,
+
+$$
+y = \frac{1}{2}\ln 2
+$$
+
+### Final Coordinate
+
+The ant starts at the origin, so its final position is
+
+$$
+\left(\frac{\pi}{4}, \frac{1}{2}\ln 2\right)
+$$
+
+## Final Result
+
+The final position of the ant is
+
+$$
+\left(\frac{\pi}{4}, \frac{1}{2}\ln 2\right)
+$$
+
+## Interpretation
+
+The horizontal and vertical displacements both converge because the step lengths form alternating series with decreasing magnitudes. Even though the ant makes infinitely many moves, the total displacement approaches a finite point in the plane.
