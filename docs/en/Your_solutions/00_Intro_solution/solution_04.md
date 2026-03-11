@@ -2,23 +2,25 @@
 
 ## Problem Statement
 
-The period of a simple pendulum is
+Rearrange the pendulum period equation to solve for $g$.
 
-$T = 2\pi \sqrt{\frac{L}{g}}$
+The formula for the period of a simple pendulum is
 
-Rearrange the equation to solve for $g$.
+$$
+T = 2\pi \sqrt{\frac{L}{g}}
+$$
 
 ---
 
 ## Theory
 
-Algebraic rearrangement isolates the desired variable by applying inverse operations.
+Algebraic manipulation allows isolating a variable by applying inverse operations.
 
 ---
 
 ## Step-by-Step Solution
 
-Start with
+Start from the original equation
 
 $$
 T = 2\pi \sqrt{\frac{L}{g}}
@@ -36,13 +38,13 @@ $$
 \left(\frac{T}{2\pi}\right)^2 = \frac{L}{g}
 $$
 
-Invert and multiply
+Multiply both sides by $g$
 
 $$
-g = \frac{L}{\left(\frac{T}{2\pi}\right)^2}
+g\left(\frac{T}{2\pi}\right)^2 = L
 $$
 
-Simplify
+Solve for $g$
 
 $$
 g = \frac{4\pi^2 L}{T^2}
@@ -60,4 +62,4 @@ $$
 
 ## Interpretation
 
-This formula allows experimental determination of gravitational acceleration by measuring the pendulum length and oscillation period.
+This rearranged equation allows the gravitational acceleration to be determined experimentally by measuring the pendulum length and oscillation period.
