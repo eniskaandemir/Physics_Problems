@@ -104,3 +104,4 @@ Damping removes energy from the system. As $b$ increases, oscillations disappear
 ## Interactive Simulation
 
 See:
+solution_09.html
