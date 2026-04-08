@@ -72,3 +72,4 @@ The resulting pattern shows constructive and destructive interference between mu
 ## Interactive Simulation
 
 See:
+solution_10.html
