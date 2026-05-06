@@ -2,142 +2,66 @@
 
 ## Problem Statement
 
-A cube is formed from 12 identical resistors, each with resistance
+A cube is constructed from $12$ identical resistors, one on each edge.
 
-$$
-R
-$$
+Each resistor has resistance:
+
+$$ R $$
 
 Determine the equivalent resistance between two opposite corners of the cube.
 
 ## Theory
 
-The cube possesses strong geometric symmetry.
+The cube has strong symmetry. When a voltage is applied between two opposite corners:
 
-When a voltage is applied between opposite corners:
+- the three vertices adjacent to the first corner have equal potential
+- the three vertices adjacent to the opposite corner have equal potential
+- equal-potential nodes can be joined without changing the circuit
 
-- equivalent nodes have the same potential
-- symmetric branches carry equal currents
-
-This symmetry allows the circuit to be reduced to simpler parallel-series combinations.
+This reduces the cube to a simpler series-parallel network.
 
 ## Step-by-Step Solution
 
-### 1. Symmetry Argument
+### 1. First Group
 
-Choose opposite corners:
+From the first corner, current splits equally into three identical resistors.
 
-- one corner at potential $V$
-- opposite corner at potential $0$
+These three resistors are in parallel:
 
-The three vertices adjacent to the first corner are equivalent by symmetry.
+$$ R_1 = \frac{R}{3} $$
 
-Similarly, the three vertices adjacent to the opposite corner are also equivalent.
+### 2. Middle Group
 
-Thus the cube reduces to three stages:
+Between the two sets of equal-potential nodes, there are six identical resistors in parallel.
 
-1. three resistors in parallel
-2. six resistors in the middle
-3. three resistors in parallel
+Thus:
 
-### 2. First Group
+$$ R_2 = \frac{R}{6} $$
 
-Three equal resistors in parallel:
+### 3. Final Group
 
-$$
-R_1
-=
-\frac{R}{3}
-$$
+Near the opposite corner, current recombines through three identical resistors in parallel:
 
-### 3. Middle Group
+$$ R_3 = \frac{R}{3} $$
 
-The middle section becomes six equal resistors arranged symmetrically.
+### 4. Total Resistance
 
-Its equivalent resistance is
+The three reduced sections are in series:
 
-$$
-R_2
-=
-\frac{R}{6}
-$$
+$$ R_{\text{eq}} = R_1 + R_2 + R_3 $$
 
-### 4. Final Group
+$$ R_{\text{eq}} = \frac{R}{3} + \frac{R}{6} + \frac{R}{3} $$
 
-Again:
+Use common denominator $6$:
 
-$$
-R_3
-=
-\frac{R}{3}
-$$
+$$ R_{\text{eq}} = \frac{2R}{6} + \frac{R}{6} + \frac{2R}{6} $$
 
-### 5. Total Resistance
-
-All three equivalent sections are in series:
-
-$$
-R_{\text{eq}}
-=
-\frac{R}{3}
-+
-\frac{R}{6}
-+
-\frac{R}{3}
-$$
-
-Find a common denominator:
-
-$$
-R_{\text{eq}}
-=
-\frac{2R}{6}
-+
-\frac{R}{6}
-+
-\frac{2R}{6}
-$$
-
-$$
-R_{\text{eq}}
-=
-\frac{5R}{6}
-$$
-
-However, because the middle reduction double-counts equivalent branches, the correct cube reduction yields
-
-$$
-R_{\text{eq}}
-=
-\frac{5}{6}R
-$$
-
-between adjacent corners, while for opposite corners the standard result is
-
-$$
-R_{\text{eq}}
-=
-\frac{5}{6}R
-$$
-
-Wait — for opposite corners of a cube, the exact equivalent resistance is
-
-$$
-R_{\text{eq}}
-=
-\frac{5}{6}R
-$$
+$$ R_{\text{eq}} = \frac{5R}{6} $$
 
 ## Final Result
 
-The equivalent resistance between opposite corners of the cube is
-
-$$
-R_{\text{eq}}
-=
-\frac{5}{6}R
-$$
+$$ R_{\text{eq}} = \frac{5R}{6} $$
 
 ## Interpretation
 
-The high symmetry of the cube causes current to split equally among equivalent branches. This allows a seemingly complicated three-dimensional resistor network to be reduced to a simple equivalent resistance.
+The cube can be simplified using symmetry. Equal-potential vertices allow the network to reduce to three series sections: three parallel resistors, six parallel resistors, and three parallel resistors.

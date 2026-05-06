@@ -4,168 +4,100 @@
 
 Determine the current flowing through the ammeter in the circuit shown.
 
-From the figure:
+Given:
 
-$$
-\mathcal{E}_1 = 9\,\text{V}
-$$
+$$ \mathcal{E}_1 = 9\,\text{V} $$
 
-$$
-\mathcal{E}_2 = 4.5\,\text{V}
-$$
+$$ \mathcal{E}_2 = 4.5\,\text{V} $$
 
-$$
-R_1 = 10\,\Omega
-$$
+$$ R_1 = 10\,\Omega $$
 
-$$
-R_2 = 20\,\Omega
-$$
+$$ R_2 = 20\,\Omega $$
 
 Each source has internal resistance
 
-$$
-r_w = 1\,\Omega
-$$
+$$ r_w = 1\,\Omega $$
 
 ## Theory
 
-Kirchhoff's laws are used to analyze circuits with multiple loops.
+Kirchhoff’s current law states:
 
-### Kirchhoff's Current Law
+$$ \sum I_{\text{in}} = \sum I_{\text{out}} $$
 
-At a junction:
+Kirchhoff’s voltage law states:
 
-$$
-\sum I_{\text{in}} = \sum I_{\text{out}}
-$$
+$$ \sum \Delta V = 0 $$
 
-### Kirchhoff's Voltage Law
-
-Around a closed loop:
-
-$$
-\sum \Delta V = 0
-$$
-
-A source with internal resistance can be treated as an ideal voltage source in series with a resistor.
+A real voltage source can be modeled as an ideal source in series with internal resistance.
 
 ## Step-by-Step Solution
 
-### 1. Define Nodes
+### 1. Define Node Voltages
 
 Let the left node be the reference point:
 
-$$
-V_A = 0
-$$
+$$ V_A = 0 $$
 
-Let the upper-right node be
+Let the upper-right node be:
 
-$$
-V_B
-$$
+$$ V_B $$
 
-and the lower-right node be
+Let the lower-right node be:
 
-$$
-V_C
-$$
+$$ V_C $$
 
 The ammeter is in the branch containing $R_2$, so the ammeter current is the current through $R_2$.
 
-### 2. Current Through the $R_2$ Branch
+### 2. Ammeter Current
 
-The current through $R_2$ from left to right is
+Current through $R_2$ from left to right is:
 
-$$
-I_A = \frac{V_A - V_B}{R_2}
-$$
+$$ I_A = \frac{V_A - V_B}{R_2} $$
 
-Since
+Since $V_A = 0$:
 
-$$
-V_A = 0
-$$
+$$ I_A = \frac{-V_B}{20} $$
 
-this becomes
+### 3. Kirchhoff Equation at Node $B$
 
-$$
-I_A = \frac{-V_B}{20}
-$$
+Using the branch relations from the diagram:
 
-### 3. Apply Kirchhoff's Current Law at Node $B$
+$$ (V_B + 4.5) + \frac{V_B}{20} + \frac{V_B - V_C}{10} = 0 $$
 
-At node $B$, currents through the top source branch, through $R_2$, and through $R_1$ must balance.
+### 4. Kirchhoff Equation at Node $C$
 
-Using the polarities shown in the diagram:
-
-$$
-(V_B + 4.5) + \frac{V_B}{20} + \frac{V_B - V_C}{10} = 0
-$$
-
-### 4. Apply Kirchhoff's Current Law at Node $C$
-
-At node $C$, currents through the bottom source branch and through $R_1$ must balance:
-
-$$
-(V_C + 9) + \frac{V_C - V_B}{10} = 0
-$$
+$$ (V_C + 9) + \frac{V_C - V_B}{10} = 0 $$
 
 ### 5. Solve the System
 
-The system is
+The two equations are:
 
-$$
-(V_B + 4.5) + \frac{V_B}{20} + \frac{V_B - V_C}{10} = 0
-$$
+$$ (V_B + 4.5) + \frac{V_B}{20} + \frac{V_B - V_C}{10} = 0 $$
 
-$$
-(V_C + 9) + \frac{V_C - V_B}{10} = 0
-$$
+$$ (V_C + 9) + \frac{V_C - V_B}{10} = 0 $$
 
-Solving gives
+Solving gives:
 
-$$
-V_B \approx -4.66\,\text{V}
-$$
+$$ V_B \approx -4.66\,\text{V} $$
 
-and
+$$ V_C \approx -8.61\,\text{V} $$
 
-$$
-V_C \approx -8.61\,\text{V}
-$$
+### 6. Ammeter Current
 
-### 6. Calculate the Ammeter Current
+$$ I_A = \frac{-V_B}{20} $$
 
-The ammeter current is
+$$ I_A = \frac{-(-4.66)}{20} $$
 
-$$
-I_A = \frac{-V_B}{20}
-$$
+$$ I_A = \frac{4.66}{20} $$
 
-Substitute:
-
-$$
-I_A = \frac{-(-4.66)}{20}
-$$
-
-$$
-I_A = \frac{4.66}{20}
-$$
-
-$$
-I_A \approx 0.233\,\text{A}
-$$
+$$ I_A \approx 0.233\,\text{A} $$
 
 ## Final Result
 
-The current through the ammeter is approximately
+The current through the ammeter is:
 
-$$
-I_A \approx 0.233\,\text{A}
-$$
+$$ I_A \approx 0.233\,\text{A} $$
 
 ## Interpretation
 
-The positive value means that the current through the ammeter branch flows from the left side of the circuit toward the right side through $R_2$. The two voltage sources oppose each other through different branches, so Kirchhoff's laws are needed to determine the actual current distribution.
+The positive value means the current through the ammeter branch flows from left to right through $R_2$.

@@ -2,71 +2,40 @@
 
 ## Problem Statement
 
-The current in an AC circuit is
+The current in an AC circuit is:
 
-$$
-I(t) = 2\sin(120\pi t)
-$$
+$$ I(t) = 2\sin(120\pi t) $$
 
-The circuit contains a single resistor:
+The circuit contains one resistor:
 
-$$
-R = 50\,\Omega
-$$
+$$ R = 50\,\Omega $$
 
 Determine the voltage equation across the resistor.
 
 ## Theory
 
-For a pure resistor, Ohm’s law applies instantaneously:
+For a pure resistor:
 
-$$
-V(t) = I(t)R
-$$
+$$ V(t) = I(t)R $$
 
-In a purely resistive AC circuit:
-
-- voltage and current are in phase
-- both have the same angular frequency
+In a purely resistive AC circuit, voltage and current are in phase.
 
 ## Step-by-Step Solution
 
-Given:
+Use Ohm’s law:
 
-$$
-I(t) = 2\sin(120\pi t)
-$$
+$$ V(t) = RI(t) $$
 
-Multiply by the resistance:
+Substitute the current:
 
-$$
-V(t) = RI(t)
-$$
+$$ V(t) = 50 \cdot 2\sin(120\pi t) $$
 
-Substitute:
-
-$$
-V(t)
-=
-50 \cdot 2\sin(120\pi t)
-$$
-
-$$
-V(t)
-=
-100\sin(120\pi t)
-$$
+$$ V(t) = 100\sin(120\pi t) $$
 
 ## Final Result
 
-The voltage equation is
-
-$$
-V(t)
-=
-100\sin(120\pi t)\,\text{V}
-$$
+$$ V(t) = 100\sin(120\pi t)\,\text{V} $$
 
 ## Interpretation
 
-In a purely resistive AC circuit, voltage follows the same sinusoidal behavior as the current. The resistor only changes the amplitude according to Ohm’s law and does not introduce a phase shift.
+The voltage has the same frequency and phase as the current. The resistor changes only the amplitude.

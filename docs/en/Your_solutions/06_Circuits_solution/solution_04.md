@@ -2,206 +2,82 @@
 
 ## Problem Statement
 
-Determine the equivalent resistance of the circuit shown in the figure.
+Calculate the equivalent resistance of the circuit shown in the figure.
 
 All resistors have resistance
 
-$$
-R = 10\,\Omega
-$$
+$$ R = 10\,\Omega $$
 
 ## Theory
 
-The circuit can be simplified by identifying series and parallel sections.
+For series resistors:
 
-### Series Connection
+$$ R_{\text{eq}} = R_1 + R_2 + \cdots $$
 
-For resistors in series:
+For parallel resistors:
 
-$$
-R_{\text{eq}} = R_1 + R_2 + \cdots
-$$
-
-### Parallel Connection
-
-For resistors in parallel:
-
-$$
-\frac{1}{R_{\text{eq}}}
-=
-\frac{1}{R_1}
-+
-\frac{1}{R_2}
-+
-\cdots
-$$
+$$ \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots $$
 
 ## Step-by-Step Solution
 
-### 1. Identify the Top Branch
+### 1. Top Branch
 
-The top branch contains two resistors in series.
+The top branch contains two resistors in series:
 
-Each resistor has resistance
+$$ R_{\text{top}} = 10 + 10 $$
 
-$$
-10\,\Omega
-$$
+$$ R_{\text{top}} = 20\,\Omega $$
 
-Therefore,
+### 2. Bottom Branch
 
-$$
-R_{\text{top}} = 10 + 10
-$$
+The lower branch begins with one resistor in series with two parallel resistors.
 
-$$
-R_{\text{top}} = 20\,\Omega
-$$
+First combine the two parallel resistors:
 
-### 2. Identify the Lower Branch
+$$ \frac{1}{R_p} = \frac{1}{10} + \frac{1}{10} $$
 
-The lower branch begins with one resistor in series.
+$$ \frac{1}{R_p} = \frac{2}{10} $$
 
-After that, the circuit splits into two parallel resistors.
+$$ R_p = 5\,\Omega $$
 
-First, combine the two parallel resistors:
+Now add the first bottom resistor:
 
-$$
-\frac{1}{R_p}
-=
-\frac{1}{10}
-+
-\frac{1}{10}
-$$
+$$ R_{\text{bottom}} = 10 + 5 $$
 
-$$
-\frac{1}{R_p}
-=
-\frac{2}{10}
-$$
+$$ R_{\text{bottom}} = 15\,\Omega $$
 
-$$
-R_p = 5\,\Omega
-$$
+### 3. Parallel Combination of Top and Bottom Branches
 
-Now add the first lower resistor in series:
+$$ \frac{1}{R_{\text{inside}}} = \frac{1}{20} + \frac{1}{15} $$
 
-$$
-R_{\text{bottom}} = 10 + 5
-$$
+$$ \frac{1}{R_{\text{inside}}} = \frac{3}{60} + \frac{4}{60} $$
 
-$$
-R_{\text{bottom}} = 15\,\Omega
-$$
+$$ \frac{1}{R_{\text{inside}}} = \frac{7}{60} $$
 
-### 3. Combine Top and Bottom Branches
+$$ R_{\text{inside}} = \frac{60}{7}\,\Omega $$
 
-The top branch and lower branch are connected in parallel between the same two nodes.
+$$ R_{\text{inside}} \approx 8.57\,\Omega $$
 
-Thus,
+### 4. Add Final Series Resistor
 
-$$
-\frac{1}{R_{\text{inside}}}
-=
-\frac{1}{R_{\text{top}}}
-+
-\frac{1}{R_{\text{bottom}}}
-$$
+The resistor on the far right is in series with the inner network:
 
-Substitute:
+$$ R_{\text{eq}} = R_{\text{inside}} + 10 $$
 
-$$
-\frac{1}{R_{\text{inside}}}
-=
-\frac{1}{20}
-+
-\frac{1}{15}
-$$
+$$ R_{\text{eq}} = \frac{60}{7} + 10 $$
 
-Find a common denominator:
+$$ R_{\text{eq}} = \frac{60}{7} + \frac{70}{7} $$
 
-$$
-\frac{1}{R_{\text{inside}}}
-=
-\frac{3}{60}
-+
-\frac{4}{60}
-$$
+$$ R_{\text{eq}} = \frac{130}{7}\,\Omega $$
 
-$$
-\frac{1}{R_{\text{inside}}}
-=
-\frac{7}{60}
-$$
-
-Therefore,
-
-$$
-R_{\text{inside}} = \frac{60}{7}\,\Omega
-$$
-
-$$
-R_{\text{inside}} \approx 8.57\,\Omega
-$$
-
-### 4. Add the Final Series Resistor
-
-The resistor on the far right is in series with the whole inner network.
-
-Therefore,
-
-$$
-R_{\text{eq}}
-=
-R_{\text{inside}} + 10
-$$
-
-$$
-R_{\text{eq}}
-=
-\frac{60}{7} + 10
-$$
-
-Convert to a common denominator:
-
-$$
-R_{\text{eq}}
-=
-\frac{60}{7}
-+
-\frac{70}{7}
-$$
-
-$$
-R_{\text{eq}}
-=
-\frac{130}{7}\,\Omega
-$$
-
-Numerically,
-
-$$
-R_{\text{eq}}
-\approx 18.57\,\Omega
-$$
+$$ R_{\text{eq}} \approx 18.57\,\Omega $$
 
 ## Final Result
 
-The equivalent resistance is
+$$ R_{\text{eq}} = \frac{130}{7}\,\Omega $$
 
-$$
-R_{\text{eq}}
-=
-\frac{130}{7}\,\Omega
-$$
-
-or approximately
-
-$$
-R_{\text{eq}}
-\approx 18.57\,\Omega
-$$
+$$ R_{\text{eq}} \approx 18.57\,\Omega $$
 
 ## Interpretation
 
-The circuit contains both series and parallel combinations. The top branch has a larger resistance than the lower branch, so more current would flow through the lower branch. The final resistor on the right increases the total resistance because it is in series with the entire network.
+The internal network is reduced by combining parallel branches, then the final right resistor is added in series.

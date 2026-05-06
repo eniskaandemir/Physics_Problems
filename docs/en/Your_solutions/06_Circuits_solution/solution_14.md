@@ -2,151 +2,71 @@
 
 ## Problem Statement
 
-Write the differential equation for a series RLC circuit containing:
+Write the differential equation for a series RLC circuit with:
 
+- voltage source $V(t)$
 - resistor $R$
 - inductor $L$
 - capacitor $C$
-- voltage source $V(t)$
 
-Compare the equation with the damped harmonic oscillator equation.
+Assume the current is $I(t)$ and the capacitor charge is $Q(t)$.
+
+Compare the equation with the damped harmonic oscillator.
 
 ## Theory
 
-Using Kirchhoff’s voltage law, the sum of voltage drops around the loop equals the applied voltage.
+Kirchhoff’s voltage law states that the sum of voltage drops equals the source voltage:
+
+$$ V(t) = V_R + V_L + V_C $$
 
 The voltage drops are:
 
-### Resistor
+$$ V_R = RI $$
 
-$$
-V_R = RI
-$$
+$$ V_L = L\frac{dI}{dt} $$
 
-### Inductor
+$$ V_C = \frac{Q}{C} $$
 
-$$
-V_L = L\frac{dI}{dt}
-$$
+Current is related to charge by:
 
-### Capacitor
-
-$$
-V_C = \frac{Q}{C}
-$$
-
-where
-
-$$
-I = \frac{dQ}{dt}
-$$
+$$ I = \frac{dQ}{dt} $$
 
 ## Step-by-Step Solution
 
-### 1. Kirchhoff’s Voltage Law
+Substitute into Kirchhoff’s law:
 
-Apply KVL:
+$$ V(t) = RI + L\frac{dI}{dt} + \frac{Q}{C} $$
 
-$$
-V(t)
-=
-V_R + V_L + V_C
-$$
+Use $I = \frac{dQ}{dt}$:
 
-Substitute expressions:
-
-$$
-V(t)
-=
-RI + L\frac{dI}{dt} + \frac{Q}{C}
-$$
-
-Using
-
-$$
-I = \frac{dQ}{dt}
-$$
-
-gives
-
-$$
-V(t)
-=
-R\frac{dQ}{dt}
-+
-L\frac{d^2Q}{dt^2}
-+
-\frac{Q}{C}
-$$
+$$ V(t) = R\frac{dQ}{dt} + L\frac{d^2Q}{dt^2} + \frac{Q}{C} $$
 
 Rearrange:
 
-$$
-L\frac{d^2Q}{dt^2}
-+
-R\frac{dQ}{dt}
-+
-\frac{1}{C}Q
-=
-V(t)
-$$
+$$ L\frac{d^2Q}{dt^2} + R\frac{dQ}{dt} + \frac{1}{C}Q = V(t) $$
 
-### 2. Comparison with Damped Harmonic Oscillator
+The damped harmonic oscillator equation is:
 
-The damped harmonic oscillator equation is
+$$ m\frac{d^2x}{dt^2} + b\frac{dx}{dt} + kx = F(t) $$
 
-$$
-m\frac{d^2x}{dt^2}
-+
-b\frac{dx}{dt}
-+
-kx
-=
-F(t)
-$$
+The analogies are:
 
-Compare term by term:
+$$ L \leftrightarrow m $$
 
-$$
-m \leftrightarrow L
-$$
+$$ R \leftrightarrow b $$
 
-$$
-b \leftrightarrow R
-$$
+$$ \frac{1}{C} \leftrightarrow k $$
 
-$$
-k \leftrightarrow \frac{1}{C}
-$$
+$$ Q \leftrightarrow x $$
 
-$$
-x \leftrightarrow Q
-$$
-
-$$
-F(t) \leftrightarrow V(t)
-$$
+$$ V(t) \leftrightarrow F(t) $$
 
 ## Final Result
 
-The differential equation of a series RLC circuit is
+The series RLC equation is:
 
-$$
-L\frac{d^2Q}{dt^2}
-+
-R\frac{dQ}{dt}
-+
-\frac{1}{C}Q
-=
-V(t)
-$$
+$$ L\frac{d^2Q}{dt^2} + R\frac{dQ}{dt} + \frac{1}{C}Q = V(t) $$
 
 ## Interpretation
 
-The RLC circuit behaves mathematically like a damped harmonic oscillator.
-
-- inductance acts like mass
-- resistance acts like damping
-- capacitance provides the restoring effect
-
-This analogy is fundamental in both electrical engineering and physics.
+The RLC circuit behaves mathematically like a damped harmonic oscillator. Inductance acts like inertia, resistance acts like damping, and capacitance provides the restoring effect.

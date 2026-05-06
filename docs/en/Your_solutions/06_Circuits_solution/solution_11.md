@@ -2,115 +2,61 @@
 
 ## Problem Statement
 
-A resistor has resistance
+A resistor has resistance:
 
-$$
-R = 100\,\Omega
-$$
+$$ R = 100\,\Omega $$
 
-A voltage of
+A voltage is applied:
 
-$$
-V = 50\,\text{V}
-$$
-
-is applied across it.
+$$ V = 50\,\text{V} $$
 
 Determine:
 
 1. the power dissipated
-2. the energy consumed in 5 minutes
+2. the energy consumed in $5$ minutes
 
 ## Theory
 
-### Electrical Power
+Power dissipated in a resistor:
 
-For a resistor:
+$$ P = \frac{V^2}{R} $$
 
-$$
-P = \frac{V^2}{R}
-$$
+Energy consumed:
 
-### Electrical Energy
-
-Energy is related to power by
-
-$$
-E = Pt
-$$
+$$ E = Pt $$
 
 ## Step-by-Step Solution
 
 ### 1. Power
 
-Use:
+$$ P = \frac{V^2}{R} $$
 
-$$
-P = \frac{V^2}{R}
-$$
+$$ P = \frac{50^2}{100} $$
 
-Substitute values:
+$$ P = \frac{2500}{100} $$
 
-$$
-P
-=
-\frac{50^2}{100}
-$$
+$$ P = 25\,\text{W} $$
 
-$$
-P
-=
-\frac{2500}{100}
-$$
+### 2. Energy
 
-$$
-P
-=
-25\,\text{W}
-$$
+Convert time:
 
-### 2. Energy in 5 Minutes
+$$ 5\,\text{min} = 300\,\text{s} $$
 
-Convert time to seconds:
+Calculate energy:
 
-$$
-5\,\text{min}
-=
-300\,\text{s}
-$$
+$$ E = Pt $$
 
-Now calculate energy:
+$$ E = 25 \cdot 300 $$
 
-$$
-E = Pt
-$$
-
-$$
-E
-=
-25 \times 300
-$$
-
-$$
-E
-=
-7500\,\text{J}
-$$
+$$ E = 7500\,\text{J} $$
 
 ## Final Result
 
-Power dissipated:
+$$ P = 25\,\text{W} $$
 
-$$
-P = 25\,\text{W}
-$$
-
-Energy consumed in 5 minutes:
-
-$$
-E = 7500\,\text{J}
-$$
+$$ E = 7500\,\text{J} $$
 
 ## Interpretation
 
-The resistor converts electrical energy into heat. The longer the resistor operates, the more energy is dissipated.
+The resistor converts electrical energy into heat. The energy consumed increases linearly with time.
