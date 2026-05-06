@@ -2,223 +2,88 @@
 
 ## Problem Statement
 
-Determine the equivalent resistance of the circuit shown in the figure.
+Calculate the equivalent resistance of the circuit shown in the figure.
 
 All resistors have resistance
 
-$$
-R = 5\,\Omega
-$$
+$$ R = 5\,\Omega $$
 
 ## Theory
 
-To determine the equivalent resistance:
+For series resistors:
 
-1. identify series connections
-2. identify parallel branches
-3. simplify the circuit step-by-step
-4. combine the reduced sections
+$$ R_{\text{eq}} = R_1 + R_2 + \cdots $$
 
-### Series Connection
+For parallel resistors:
 
-For resistors in series:
-
-$$
-R_{\text{eq}} = R_1 + R_2 + \cdots
-$$
-
-### Parallel Connection
-
-For resistors in parallel:
-
-$$
-\frac{1}{R_{\text{eq}}}
-=
-\frac{1}{R_1}
-+
-\frac{1}{R_2}
-+
-\cdots
-$$
+$$ \frac{1}{R_{\text{eq}}} = \frac{1}{R_1} + \frac{1}{R_2} + \cdots $$
 
 ## Step-by-Step Solution
 
-### 1. Identify the Main Branches
+### 1. Upper-Left Branch
 
-The circuit contains three branches between the left and right terminals.
+The left vertical resistor and top horizontal resistor are in series:
 
-#### Upper-left branch
+$$ R_A = 5 + 5 $$
 
-This branch contains:
+$$ R_A = 10\,\Omega $$
 
-- left vertical resistor
-- top horizontal resistor
+### 2. Middle Branch
 
-These two resistors are in series:
+The middle path contains three resistors in series:
 
-$$
-R_A = 5 + 5
-$$
+$$ R_B = 5 + 5 + 5 $$
 
-$$
-R_A = 10\,\Omega
-$$
+$$ R_B = 15\,\Omega $$
 
-#### Middle branch
+The upper-left branch and middle branch form one path:
 
-The middle branch contains:
+$$ R_{AB} = 10 + 15 $$
 
-- two vertical resistors
-- one lower horizontal resistor
+$$ R_{AB} = 25\,\Omega $$
 
-All are in series:
+### 3. Right Branch
 
-$$
-R_B = 5 + 5 + 5
-$$
+The right side contains two resistors in series:
 
-$$
-R_B = 15\,\Omega
-$$
+$$ R_C = 5 + 5 $$
 
-The upper-left branch and middle branch connect in series through the same path:
+$$ R_C = 10\,\Omega $$
 
-$$
-R_{AB} = 10 + 15
-$$
+### 4. Parallel Combination
 
-$$
-R_{AB} = 25\,\Omega
-$$
+The two main branches are in parallel:
 
-### 2. Right Branch
+$$ \frac{1}{R_P} = \frac{1}{25} + \frac{1}{10} $$
 
-The right branch contains two vertical resistors in series:
+$$ \frac{1}{R_P} = \frac{2}{50} + \frac{5}{50} $$
 
-$$
-R_C = 5 + 5
-$$
+$$ \frac{1}{R_P} = \frac{7}{50} $$
 
-$$
-R_C = 10\,\Omega
-$$
+$$ R_P = \frac{50}{7}\,\Omega $$
 
-### 3. Parallel Combination
+$$ R_P \approx 7.14\,\Omega $$
 
-The two large branches are connected in parallel:
+### 5. Add Bottom Series Resistor
 
-- branch 1:
+The bottom resistor is in series with the parallel network:
 
-$$
-25\,\Omega
-$$
+$$ R_{\text{eq}} = R_P + 5 $$
 
-- branch 2:
+$$ R_{\text{eq}} = \frac{50}{7} + 5 $$
 
-$$
-10\,\Omega
-$$
+$$ R_{\text{eq}} = \frac{50}{7} + \frac{35}{7} $$
 
-Use the parallel formula:
+$$ R_{\text{eq}} = \frac{85}{7}\,\Omega $$
 
-$$
-\frac{1}{R_P}
-=
-\frac{1}{25}
-+
-\frac{1}{10}
-$$
-
-Find common denominator:
-
-$$
-\frac{1}{R_P}
-=
-\frac{2}{50}
-+
-\frac{5}{50}
-$$
-
-$$
-\frac{1}{R_P}
-=
-\frac{7}{50}
-$$
-
-Therefore:
-
-$$
-R_P
-=
-\frac{50}{7}\,\Omega
-$$
-
-$$
-R_P
-\approx 7.14\,\Omega
-$$
-
-### 4. Bottom Resistor
-
-The bottom resistor is connected in series with the entire parallel network.
-
-Thus:
-
-$$
-R_{\text{eq}}
-=
-R_P + 5
-$$
-
-$$
-R_{\text{eq}}
-=
-\frac{50}{7} + 5
-$$
-
-Convert to common denominator:
-
-$$
-R_{\text{eq}}
-=
-\frac{50}{7}
-+
-\frac{35}{7}
-$$
-
-$$
-R_{\text{eq}}
-=
-\frac{85}{7}\,\Omega
-$$
-
-$$
-R_{\text{eq}}
-\approx 12.14\,\Omega
-$$
+$$ R_{\text{eq}} \approx 12.14\,\Omega $$
 
 ## Final Result
 
-The equivalent resistance of the circuit is
+$$ R_{\text{eq}} = \frac{85}{7}\,\Omega $$
 
-$$
-R_{\text{eq}}
-=
-\frac{85}{7}\,\Omega
-$$
-
-or approximately
-
-$$
-R_{\text{eq}}
-\approx 12.14\,\Omega
-$$
+$$ R_{\text{eq}} \approx 12.14\,\Omega $$
 
 ## Interpretation
 
-The circuit combines both series and parallel resistor arrangements.
-
-- series sections increase resistance
-- parallel branches reduce resistance
-
-The final equivalent resistance is therefore smaller than the total sum of all resistors but larger than the smallest branch resistance.
+The circuit contains both series and parallel sections. The parallel part reduces the total resistance, while the bottom resistor increases it because it is in series.
