@@ -24,10 +24,10 @@ $$
 
 Determine:
 
-1. the equivalent resistance when the resistors are connected in series
-2. the current supplied by the battery in the series case
-3. the equivalent resistance when the resistors are connected in parallel
-4. the current supplied by the battery in the parallel case
+1. the equivalent resistance when connected in series
+2. the battery current in the series case
+3. the equivalent resistance when connected in parallel
+4. the battery current in the parallel case
 
 ## Theory
 
@@ -37,14 +37,6 @@ For resistors in series:
 
 $$
 R_{\text{eq}} = R_1 + R_2 + R_3
-$$
-
-The same current flows through all resistors.
-
-Using Ohm’s law:
-
-$$
-I = \frac{V}{R}
 $$
 
 ### Parallel Connection
@@ -61,13 +53,15 @@ $$
 \frac{1}{R_3}
 $$
 
-In parallel circuits, the voltage across each resistor is the same.
+### Ohm's Law
+
+$$
+I = \frac{V}{R}
+$$
 
 ## Step-by-Step Solution
 
 ### 1. Series Equivalent Resistance
-
-Add the resistances:
 
 $$
 R_{\text{series}}
@@ -76,20 +70,12 @@ R_{\text{series}}
 $$
 
 $$
-R_{\text{series}} = 95\,\Omega
-$$
-
-### 2. Current in the Series Circuit
-
-Use Ohm’s law:
-
-$$
-I_{\text{series}}
+R_{\text{series}}
 =
-\frac{V}{R_{\text{series}}}
+95\,\Omega
 $$
 
-Substitute values:
+### 2. Series Current
 
 $$
 I_{\text{series}}
@@ -99,12 +85,11 @@ $$
 
 $$
 I_{\text{series}}
-\approx 0.126\,\text{A}
+\approx
+0.126\,\text{A}
 $$
 
 ### 3. Parallel Equivalent Resistance
-
-Use the parallel formula:
 
 $$
 \frac{1}{R_{\text{parallel}}}
@@ -116,7 +101,7 @@ $$
 \frac{1}{50}
 $$
 
-Find a common denominator:
+Convert fractions into decimals:
 
 $$
 \frac{1}{15}
@@ -136,7 +121,7 @@ $$
 0.0200
 $$
 
-Add:
+Add them:
 
 $$
 \frac{1}{R_{\text{parallel}}}
@@ -150,7 +135,7 @@ $$
 0.1200
 $$
 
-Thus,
+Therefore:
 
 $$
 R_{\text{parallel}}
@@ -160,12 +145,11 @@ $$
 
 $$
 R_{\text{parallel}}
-\approx 8.33\,\Omega
+\approx
+8.33\,\Omega
 $$
 
-### 4. Current in the Parallel Circuit
-
-Apply Ohm’s law:
+### 4. Parallel Current
 
 $$
 I_{\text{parallel}}
@@ -175,41 +159,42 @@ $$
 
 $$
 I_{\text{parallel}}
-\approx 1.44\,\text{A}
+\approx
+1.44\,\text{A}
 $$
 
 ## Final Result
 
 ### Series Circuit
 
-Equivalent resistance:
+$$
+R_{\text{series}}
+=
+95\,\Omega
+$$
 
 $$
-R_{\text{series}} = 95\,\Omega
-$$
-
-Battery current:
-
-$$
-I_{\text{series}} \approx 0.126\,\text{A}
+I_{\text{series}}
+\approx
+0.126\,\text{A}
 $$
 
 ### Parallel Circuit
 
-Equivalent resistance:
+$$
+R_{\text{parallel}}
+\approx
+8.33\,\Omega
+$$
 
 $$
-R_{\text{parallel}} \approx 8.33\,\Omega
-$$
-
-Battery current:
-
-$$
-I_{\text{parallel}} \approx 1.44\,\text{A}
+I_{\text{parallel}}
+\approx
+1.44\,\text{A}
 $$
 
 ## Interpretation
 
-In a series connection, resistances add directly, producing a larger equivalent resistance and therefore a smaller current.
+Series connections increase total resistance because resistors are added directly.
 
-In a parallel connection, the equivalent resistance becomes smaller than any individual resistor, allowing much larger current to flow from the battery.
+Parallel connections decrease total resistance because the current can flow through multiple branches simultaneously.
